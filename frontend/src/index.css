@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Custom styles for HSBC Dashboard */
+@layer base {
+  html {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-base-100 text-base-content;
+  }
+}
+
+@layer components {
+  .btn-hsbc {
+    @apply bg-hsbc-red hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-hsbc-secondary {
+    @apply bg-hsbc-blue hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .card-hsbc {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700;
+  }
+
+  .input-hsbc {
+    @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-hsbc-red focus:border-transparent dark:bg-gray-700 dark:text-white;
+  }
+
+  .sidebar-item {
+    @apply flex items-center px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200;
+  }
+
+  .sidebar-item.active {
+    @apply bg-hsbc-red text-white;
+  }
+
+  .upload-zone {
+    @apply border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-hsbc-red dark:hover:border-hsbc-red transition-colors duration-200;
+  }
+
+  .upload-zone.dragover {
+    @apply border-hsbc-red bg-red-50 dark:bg-red-900/20;
+  }
+
+  .chart-container {
+    @apply bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg;
+  }
+
+  .metric-card {
+    @apply bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-6 border border-blue-200 dark:border-blue-700;
+  }
+
+  .loading-spinner {
+    @apply animate-spin rounded-full h-8 w-8 border-b-2 border-hsbc-red;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .status-badge.success {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400;
+  }
+
+  .status-badge.warning {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400;
+  }
+
+  .status-badge.error {
+    @apply bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400;
+  }
+
+  .status-badge.info {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-hsbc-red to-hsbc-blue bg-clip-text text-transparent;
+  }
+
+  .shadow-hsbc {
+    box-shadow: 0 4px 6px -1px rgba(219, 0, 17, 0.1),
+      0 2px 4px -1px rgba(219, 0, 17, 0.06);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Keyboard navigation styles */
+.focus-visible {
+  @apply outline-none ring-2 ring-hsbc-red ring-offset-2;
+}
+
+/* Toast customizations */
+.toast {
+  @apply rounded-lg shadow-lg;
+}
+
+/* Chart customizations */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  @apply stroke-gray-200 dark:stroke-gray-700;
+}
+
+.recharts-text {
+  @apply fill-gray-600 dark:fill-gray-400;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    @apply hidden;
+  }
+}
+
+@media (min-width: 641px) {
+  .desktop-hidden {
+    @apply hidden;
+  }
+}
