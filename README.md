@@ -4,6 +4,10 @@
 
 A comprehensive web platform that enables analysts, managers, and financial engineers to upload various datasets, normalize and aggregate them on-the-fly, and gain real-time visibility through an intuitive, interactive dashboard.
 
+## Documentation
+
+- [Documentation & ER Diagram]([https://your-api-docs-url.com](https://docs.google.com/document/d/1gnmiQifpHaDxwAYrwgINXXANRyyo_iC85KvQRtT5HVc/edit?usp=sharing))
+
 ## Features
 
 ### **Input Flexibility**
